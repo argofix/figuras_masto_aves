@@ -1,0 +1,400 @@
+"classe","ordem","familia","genero","nome_cientifico","nome_cientifico_anterior","nome_comum","categoria","criterio"
+"Mammalia","Cetartiodactyla","Cervidae","Mazama","Mazama americana","Mazama americana","Guassu-pará, Guatapará, Suaçupita, Veado-capoeiro, Veado-mateiro, Veado-pardo, Veado-retovado, Veado-vermelho","Dados Insuficientes",NA
+"Mammalia","Perissodactyla","Tapiridae","Tapirus","Tapirus terrestris","Tapirus terrestris","Anta","Vulnerável","A2cd"
+"Aves","Galliformes","Cracidae","Aburria","Aburria cujubi","Aburria cujubi","cujubi","Vulnerável","A2d"
+"Aves","Galliformes","Cracidae","Ortalis","Ortalis guttata","Ortalis guttata","aracuã-pintado","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus zabele","Crypturellus noctivagus zabele","zabelé","Vulnerável","A2cd"
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus brevirostris","Crypturellus brevirostris","inhambu-carijó","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Pauxi","Pauxi tomentosa","Pauxi tomentosa","mutum-do-norte","Menos Preocupante",NA
+"Aves","Gruiformes","Psophiidae","Psophia","Psophia napensis","Psophia napensis","uru-do-campo","Menos Preocupante",NA
+"Aves","Gruiformes","Psophiidae","Psophia","Psophia leucoptera","Psophia leucoptera","jacamim-de-costas-brancas","Menos Preocupante",NA
+"Aves","Gruiformes","Psophiidae","Psophia","Psophia viridis","Psophia viridis","jacamim-de-costas-verdes","Vulnerável","A2c"
+"Mammalia","Carnivora","Mustelidae","Mustela","Mustela africana","Mustela africana","Doninha, doninha amazônica","Menos Preocupante",NA
+"Mammalia","Carnivora","Canidae","Speothos","Speothos venaticus","Speothos venaticus","cachorro-do-mato-vinagre, cachorro-vinagre","Vulnerável","C1"
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus duidae","Crypturellus duidae","inhambu-de-pé-cinza","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Crax","Crax fasciolata","Crax fasciolata","mutum, mutum-de-penacho, mutum-pinima, mutum-poranga","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Ortalis","Ortalis araucuan","Ortalis araucuan","aracuã-de-barriga-branca","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Pauxi","Pauxi tuberosa","Pauxi tuberosa","Mutum-cavalo","Menos Preocupante",NA
+"Mammalia","Cingulata","Dasypodidae","Priodontes","Priodontes maximus","Priodontes maximus","Tatu-açú, Tatu-canastra","Vulnerável","A2cd"
+"Mammalia","Pilosa","Bradypodidae","Bradypus","Bradypus tridactylus","Bradypus tridactylus","Preguiça-de-bentinho, Preguiça-de-garganta-amarela, Preguiça-de-três-dedos","Menos Preocupante",NA
+"Mammalia","Pilosa","Megalonychidae","Choloepus","Choloepus hoffmanni","Choloepus hoffmanni","preguiça-real","Quase Ameaçada",NA
+"Mammalia","Cingulata","Dasypodidae","Dasypus","Dasypus septemcinctus","Dasypus septemcinctus","Muleta, Mulita, Tatu-bolinha, Tatu-china, Tatu-í, Tatu-mirim, Tatu-mula","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Caluromys","Caluromys philander","Caluromys philander","Cuíca, Cuíca-lanosa, Mucura-xixica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Didelphis","Didelphis marsupialis","Didelphis marsupialis","Gambá-de-orelha-preta, Mucura","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Hyladelphys","Hyladelphys kalinowskii","Hyladelphys kalinowskii","Catita, Guaiquica, Peru gracile mouse opossum","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa waterhousei","Marmosa waterhousei","Cuíca, Marmosa","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosops","Marmosops noctivagus","Marmosops noctivagus","Cuíca, Marmosa, White-bellied slender opossum","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosops","Marmosops pinheiroi","Marmosops pinheiroi","Cuíca, Marmosa, Pinheiro’s slender opossum","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Metachirus","Metachirus nudicaudatus","Metachirus nudicaudatus","Cuíca-de-quatro-olhos, Cuíca-marrom, Cuíca-rabo-de-rato, Jupati","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou insidiosus","Coendou insidiosus","Bahian Hairy Dwarf Porcupine, Ouriço-cacheiro","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou prehensilis","Coendou prehensilis",NA,"Quase Ameaçada",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou spinosus","Coendou spinosus","Ouriço-cacheiro, Paraguay Hairy Dwarf Porcupine, Porcupine, Spiny Tree Porcupine","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis americana","Monodelphis americana","Catita, Catita de listra, Catita-de-listras","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis arlindoi","Monodelphis arlindoi","Catita","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis brevicaudata","Monodelphis brevicaudata","Catita, Northern Red-sided Opossum, Opossum-musaraigne À Pattes Roughes, Red-legged Short-tailed Opossum","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis emiliae","Monodelphis emiliae","Catita","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Philander","Philander quica","Philander frenatus","Carachupa, Cucha gris de cuatro ojos, Cuíca-de-quatro-olhos, Guaiki, Mucura-de-quatro-olhos, Pericote, Quica opossum, Rabipelao, Rajá, Raposa huevera, Southeastern Four-eyed Opossum, Zorro","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Dasyprocta","Dasyprocta iacki","Dasyprocta iacki","Cutia, Cutia-de-garupa-laranja, Red-rumped Agouti","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys setosus","Trinomys setosus","Elegant- spined Atlantic Spiny rat, Hairy Atlantic Spiny-rat, Hairy Spiny Rat, Rato-do-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Sciuridae","Hadrosciurus","Hadrosciurus igniventris","Hadrosciurus igniventris","Esquilo, Quatipuru, Southern Amazon Red Squirrel","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Isothrix","Isothrix sinnamariensis","Isothrix sinnamariensis","Rato coró, Rato do mato","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Kannabateomys","Kannabateomys amblyonyx","Kannabateomys amblyonyx","Atlantic Bamboo Rat, Rato-da-taquara","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Mesomys","Mesomys stimulax","Mesomys stimulax","Pará Spiny Tree-rat, Rato-do-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys cuvieri","Proechimys cuvieri","Cuvier’s Spiny-rat, Rato-de-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys goeldii","Proechimys goeldii",NA,"Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys roberti","Proechimys roberti",NA,"Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys blainvilii","Phyllomys blainvilii","Golden Atlantic Tree-rat, Rato-da-árvore","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys kerri","Phyllomys kerri","Kerr’s Atlantic Tree-rat, Rato-da-árvore","Quase Ameaçada",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys mantiqueirensis","Phyllomys mantiqueirensis","Mantiqueira Atlantic Tree-rat, Rato-da-árvore","Dados Insuficientes",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys pattoni","Phyllomys pattoni","Rato-da-árvore, Rusty-sided Atlantic Tree-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys sulinus","Phyllomys sulinus","Rato-da-árvore, Southern Atlantic Tree-rat","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Aburria","Aburria jacutinga","Aburria jacutinga","jacutinga","Em Perigo","C2a(i)"
+"Aves","Galliformes","Cracidae","Ortalis","Ortalis squamata","Ortalis squamata","aracuã-escamoso","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Nothura","Nothura boraquira","Nothura boraquira","codorna-do-nordeste","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Rhynchotus","Rhynchotus rufescens","Rhynchotus rufescens","perdiz","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus noctivagus","Crypturellus noctivagus","jaó-do-sul","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus strigulosus","Crypturellus strigulosus","inambu-relógio","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico humeralifer","Mico humeralifer","Sagui-de-tufos","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico saterei","Mico saterei","Sagui-dos-saterê","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Sapajus","Sapajus cay","Sapajus cay","Macaco-prego, macaco-prego-do-papo-amarelo","Vulnerável","A4cd"
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus miltoni",NA,NA,"Menos Preocupante",NA
+"Mammalia","Primates","Atelidae","Ateles","Ateles chamek",NA,"Coatá, Coatá-preto, Macaco-aranha, Macaco-aranha-da-cara-preta","Vulnerável","A4cd"
+"Mammalia","Primates","Atelidae","Ateles","Ateles marginatus","Ateles marginatus","Coatá-da-testa-branca, Cuamba (Pará), Guatá (Mato Grosso), Macaco-aranha","Em Perigo","A4cd"
+"Mammalia","Primates","Atelidae","Ateles","Ateles paniscus","Ateles paniscus","Coatá, Macaco-aranha","Menos Preocupante",NA
+"Mammalia","Primates","Atelidae","Alouatta","Alouatta belzebul","Alouatta belzebul","Bugio, Guariba, Guariba-de-mãos-ruivas, Guariba-de-mãos-vermelhas","Vulnerável","A2cd"
+"Mammalia","Primates","Atelidae","Alouatta","Alouatta discolor","Alouatta discolor","Guariba-de-mãos-ruivas, guariba-de-mãos-vermelhas","Vulnerável","A4cd"
+"Mammalia","Primates","Atelidae","Alouatta","Alouatta nigerrima","Alouatta nigerrima","Guariba-de-mãos-ruivas, guariba-preta","Menos Preocupante",NA
+"Mammalia","Primates","Atelidae","Alouatta","Alouatta ululata","Alouatta ululata","capelão, Guariba, guariba-da-Caatinga","Em Perigo","C2a(i)"
+"Mammalia","Primates","Callitrichidae","Callithrix","Callithrix aurita","Callithrix aurita","sagui-caveirinha, Sagui-da-serra-escuro","Em Perigo","A4cde"
+"Mammalia","Primates","Callitrichidae","Callithrix","Callithrix kuhlii","Callithrix kuhlii","Sagui-de-wied","Quase Ameaçada",NA
+"Mammalia","Primates","Callitrichidae","Callithrix","Callithrix penicillata","Callithrix penicillata","Mico-estrela, Sagui-de-tufos-pretos","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Leontocebus","Leontocebus fuscicollis","Saguinus fuscicollis avilapiresi","Sagui-de-cara-suja","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Saguinus","Saguinus imperator","Saguinus imperator imperator","Bigodeiro, Mono Bigotudo, Mono Nicolás Suárez","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Saguinus","Saguinus mystax","Saguinus mystax mystax","Sagui-de-bigode","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Leontocebus","Leontocebus nigricollis","Saguinus nigricollis","Sauim","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Chiropotes","Chiropotes utahickae","Chiropotes utahickae","Cuxiú","Vulnerável","A2c"
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus caligatus","Callicebus caligatus","Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Cheracebus","Cheracebus lugens","Callicebus lugens","Sauá-de-colar, zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus pallescens","Callicebus pallescens","sauá e boca-d’água, Zogue-zogue","Dados Insuficientes",NA
+"Mammalia","Primates","Pitheciidae","Pithecia","Pithecia albicans","Pithecia albicans","macaco-velho, macaco-voador, Parauacu-branco","Menos Preocupante",NA
+"Mammalia","Primates","Aotidae","Aotus","Aotus trivirgatus","Aotus trivirgatus","Macaco-da-noite, Macaco-da-noite-de-pescoço-cinza","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Cacajao","Cacajao calvus","Cacajao calvus calvus","bicó, Uacari-branco","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Cacajao","Cacajao novaesi","Cacajao calvus novaesi","bicó, Uacari, uacari-de-Novaes","Quase Ameaçada",NA
+"Mammalia","Primates","Pitheciidae","Cacajao","Cacajao ucayalii","Cacajao calvus ucayalii","Uacari","Dados Insuficientes",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis handleyi",NA,NA,"Dados Insuficientes",NA
+"Mammalia","Lagomorpha","Leporidae","Sylvilagus","Sylvilagus tapetillus",NA,"Rio de Janeiro Dwarf Cottontail, Small tapetí","Quase Ameaçada",NA
+"Mammalia","Cetartiodactyla","Cervidae","Mazama","Mazama nana","Mazama nana","Veado-bororó-do-sul, Veado-mão-curta","Vulnerável","A3cde"
+"Mammalia","Cetartiodactyla","Cervidae","Odocoileus","Odocoileus virginianus","Odocoileus virginianus","Veado-da-cara-branca, Veado-galheiro","Dados Insuficientes",NA
+"Aves","Galliformes","Cracidae","Penelope","Penelope jacquacu","Penelope jacquacu","jacu-de-spix","Menos Preocupante",NA
+"Aves","Gruiformes","Psophiidae","Psophia","Psophia ochroptera","Psophia ochroptera","jacamim-de-costas-amarelas","Menos Preocupante",NA
+"Mammalia","Carnivora","Procyonidae","Bassaricyon","Bassaricyon alleni","Bassaricyon alleni","Gatiara, gogó-de-sola, janaú e macaco janauí/janauaí/januí, macaco da noite","Menos Preocupante",NA
+"Mammalia","Carnivora","Canidae","Cerdocyon","Cerdocyon thous","Cerdocyon thous","Cachorro do mato, fusquinho, graxaim, graxaim do mato, guancito, guaraxaim, guaraxo, lobete, lobinho, mata-virgem, rabo-fofo, raposa, raposão, raposinha-do-mato","Menos Preocupante",NA
+"Mammalia","Carnivora","Canidae","Chrysocyon","Chrysocyon brachyurus","Chrysocyon brachyurus","Guará, Lobão, Lobo, Lobo-de-crina, Lobo-de-juba, Lobo-guará, Lobo-vermelho","Vulnerável","C1"
+"Mammalia","Carnivora","Mephitidae","Conepatus","Conepatus chinga","Conepatus chinga","cangambá, gambá, zorrilho","Menos Preocupante",NA
+"Mammalia","Carnivora","Mephitidae","Conepatus","Conepatus semistriatus","Conepatus semistriatus","cangambá, gambá, jatitataca, jirita, tacaca, ticaca, zorrilho","Menos Preocupante",NA
+"Mammalia","Carnivora","Mustelidae","Eira","Eira barbara","Eira barbara","Irara, papa-mel","Menos Preocupante",NA
+"Mammalia","Carnivora","Mustelidae","Galictis","Galictis cuja","Galictis cuja","aracambé, cachorrinho ao, furão, furão pequeno","Menos Preocupante",NA
+"Mammalia","Carnivora","Mustelidae","Galictis","Galictis vittata","Galictis vittata","furão grande, furão maior","Menos Preocupante",NA
+"Mammalia","Carnivora","Felidae","Leopardus","Leopardus pardalis","Leopardus pardalis","Canguçu, Gato-do-mato-grande, Jaguatirica, Maracajá, meia-malha, Oncinha","Menos Preocupante",NA
+"Mammalia","Carnivora","Felidae","Leopardus","Leopardus wiedii","Leopardus wiedii","Gato-do-mato, Gato-maracajá, Gato-peludo, Maracajá-peludo","Vulnerável","A4b"
+"Mammalia","Carnivora","Felidae","Panthera","Panthera onca","Panthera onca","Canguçu, Onça-pintada, Onça-preta","Vulnerável","A2cd"
+"Mammalia","Carnivora","Felidae","Puma","Puma concolor","Puma concolor","Bodeira, Leão-baio, Leãozinho-da-cara-suja, Onça-do-lombo-preto, Onça-parda, Onça-vermelha, Suçuarana","Quase Ameaçada",NA
+"Aves","Galliformes","Cracidae","Crax","Crax globulosa","Crax globulosa","mutum-açu, mutum-de-assovio, mutum-de-fava, mutum-fava, mutum-piurí","Em Perigo","A3cd+4cd"
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus undulatus","Crypturellus undulatus","jaó, juó, macucau, macucaua, macucauá, sururina","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Nothura","Nothura minor","Nothura minor","codorna-mineira","Em Perigo","A4cd"
+"Aves","Galliformes","Cracidae","Ortalis","Ortalis canicollis","Ortalis canicollis","aracuã-do-pantanal","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Taoniscus","Taoniscus nanus","Taoniscus nanus","codorna-carapé, inhambu-carapé","Em Perigo","B2ab(ii,iii)"
+"Aves","Galliformes","Cracidae","Penelope","Penelope jacucaca","Penelope jacucaca","jacucaca","Vulnerável","A2b"
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus cinereus","Crypturellus cinereus","Inambu-pixuna","Menos Preocupante",NA
+"Aves","Gruiformes","Psophiidae","Psophia","Psophia interjecta","Psophia interjecta","jacamim-do-xingu","Em Perigo","A2cd"
+"Aves","Tinamiformes","Tinamidae","Tinamus","Tinamus tao","Tinamus tao","azulona","Vulnerável","A2cd"
+"Mammalia","Pilosa","Bradypodidae","Bradypus","Bradypus torquatus","Bradypus torquatus","Aí-pixuna, Preguiça-de-coleira, Preguiça-preta","Vulnerável","B2ab(iii)"
+"Mammalia","Cingulata","Dasypodidae","Cabassous","Cabassous tatouay","Cabassous tatouay","Tatu-de-rabo-mole-grande","Menos Preocupante",NA
+"Mammalia","Cingulata","Dasypodidae","Cabassous","Cabassous unicinctus","Cabassous unicinctus","cabassú (variação de capacou - tatu em Galibi - grupo indígena da Guiana Francesa, tatu-de-rabo-mole, tatu-de-rabo-mole-pequeno, tatu-rabo-de-couro","Menos Preocupante",NA
+"Mammalia","Pilosa","Cyclopedidae","Cyclopes","Cyclopes didactylus","Cyclopes didactylus","Tamanduá-cigarra, Tamanduá-i, Tamanduaí, Tamanduá-seda","Menos Preocupante",NA
+"Mammalia","Pilosa","Cyclopedidae","Cyclopes","Cyclopes xinguensis",NA,"Tamanduaí","Menos Preocupante",NA
+"Mammalia","Pilosa","Cyclopedidae","Cyclopes","Cyclopes thomasi",NA,"Tamanduaí","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Caluromysiops","Caluromysiops irrupta","Caluromysiops irrupta","Cuíca, Cuíca-amazônica, Cuíca-de-colete","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Chironectes","Chironectes minimus","Chironectes minimus","Cassaco d´água, Cuíca-d’água, Raposa-d’água","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Cryptonanus","Cryptonanus agricolai","Cryptonanus agricolai","Catita, Guaiquica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Didelphis","Didelphis albiventris","Didelphis albiventris","Gambá-de-orelha-branca, Mucura, Saruê","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Didelphis","Didelphis aurita","Didelphis aurita","Gambá, Gambá-de-orelha-preta","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Gracilinanus","Gracilinanus agilis","Gracilinanus agilis","Catita, Cuíca, Cuiquinha, Guaiquica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Lutreolina","Lutreolina crassicaudata","Lutreolina crassicaudata","Cuíca de cauda grossa, Cuíca-marrom","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa lepida","Marmosa lepida","Cuíca, Marmosa","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa murina","Marmosa murina","Cuíca, Marmosa","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosops","Marmosops incanus","Marmosops incanus","Cuíca, Guaiquica, Opossum-souris gris","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosops","Marmosops parvidens","Marmosops parvidens","Marmosa","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou baturitensis","Coendou baturitensis","Baturite Porcupine, Porco-espinho-de-baturité","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis domestica","Monodelphis domestica","Catita, Cuíca do rabo curto, Mbicuré-í","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis glirina","Monodelphis glirina","Catita, Cuíca","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis iheringi","Monodelphis iheringi","Catita, Guaiquica listrada","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis unistriata","Monodelphis unistriata","Catita","Dados Insuficientes",NA
+"Mammalia","Rodentia","Echimyidae","Dactylomys","Dactylomys boliviensis","Dactylomys boliviensis","Bolivian Bamboo Rat, Rato-do-bambu, Toró","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Philander","Philander andersoni","Philander andersoni","Anderson's Four-eyed Opossum, Black Four-eyed Opossum, Comadreja negra de cuatro ojos, Cuíca común, Cuíca-de-quatro-olhos, Mucura-de-quatro-olhos, Opossum Noir, Raposa hevera, Zorro","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Philander","Philander mcilhennyi","Philander mcilhennyi","Carachupa, Cucha gris de cuatro ojos, Cuíca-de-quatro-olhos, Guaiki, Mcilhenny's Four-eyed Opossum, Mucura-de-quatro-olhos, Pericote, Quica opossum, Rabipelao, Rajá, Raposa huevera, Zorro","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Dasyprocta","Dasyprocta azarae","Dasyprocta azarae","Azara's Agouti, Cutia","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Dasyprocta","Dasyprocta croconota","Dasyprocta croconota","Amazon Red-rumped Agouti, Cutia, Orange Agouti","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Thylamys","Thylamys macrurus","Thylamys macrurus","Catita, Long-tailed Fat-tailed opossum, Opossum-souris À Longue Queue, Paraguayan Fat-tailed mouse opossum","Menos Preocupante",NA
+"Mammalia","Rodentia","Caviidae","Galea","Galea spixii","Galea spixii","Preá","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys bonafidei","Trinomys bonafidei","Rato-do-espinho, Serra dos Órgãos Atlantic Spiny-rat","Quase Ameaçada",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys paratus","Trinomys paratus","Rato-do-espinho, Rigid- spined Atlantic Spiny Rat, Spiked Atlantic Spiny-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Sciuridae","Hadrosciurus","Hadrosciurus spadiceus","Hadrosciurus spadiceus","Esquilo, Quatipuru, Southern Amazon Red Squirrel","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Thrichomys","Thrichomys pachyurus","Thrichomys pachyurus","Punaré, Rabudo","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Mesomys","Mesomys hispidus","Mesomys hispidus","Ferreira’s Spiny Tree-rat, Rato-do-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Sciuridae","Sciurillus","Sciurillus pusillus","Sciurillus pusillus","Neotropical Pygmy Squirrel, Quatipuruzinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Myoprocta","Myoprocta acouchy","Myoprocta acouchy","Cotiara, Cutiara","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys longicaudatus","Proechimys longicaudatus",NA,"Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys simonsi","Proechimys simonsi","Rato-do-espinho, Simon’s Spiny-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys dasythrix","Phyllomys dasythrix","Drab Atlantic Tree-rat, Rato-da-árvore","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys lamarum","Phyllomys lamarum","Pallid Atlantic Tree-rat, Rato-da-árvore","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys thomasi",NA,"Giant Atlantic Tree-rat, Rato-da-árvore","Em Perigo","B1ab(iii)"
+"Mammalia","Rodentia","Caviidae","Cavia","Cavia aperea","Cavia aperea","Preá","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Chaetomys","Chaetomys subspinosus",NA,"Bristle-spined Porcupine, Gandú, Ouriço-preto","Vulnerável","B2ab(ii,iii)"
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis pinocchio","Monodelphis pinocchio",NA,"Quase Ameaçada",NA
+"Aves","Tinamiformes","Tinamidae","Tinamus","Tinamus solitarius","Tinamus solitarius","macuco","Quase Ameaçada",NA
+"Aves","Cariamiformes","Cariamidae","Cariama","Cariama cristata","Cariama cristata","seriema","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus obsoletus","Crypturellus obsoletus","inhambuguaçu","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico marcai","Mico marcai","Sagui-de-marca","Quase Ameaçada",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico rondoni",NA,"Macaquinho-branco, Mico-de-Rondônia, Sagui-branco","Vulnerável","A2ce+4ce"
+"Mammalia","Primates","Cebidae","Cebus","Cebus albifrons","Cebus albifrons","Caiarara","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Saimiri","Saimiri boliviensis","Saimiri boliviensis","Macaco-de-cheiro, Macaco-mão-de-ouro","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Sapajus","Sapajus apella","Sapajus apella","Macaco-prego","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Sapajus","Sapajus robustus","Sapajus robustus","Macaco, Macaco-prego-de crista, Macaco-preto, Mico-topetudo","Em Perigo","A4bcde"
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus toppini",NA,NA,"Menos Preocupante",NA
+"Mammalia","Primates","Atelidae","Ateles","Ateles belzebuth","Ateles belzebuth","coatá, Macaco-aranha","Vulnerável","A4cd"
+"Mammalia","Primates","Atelidae","Alouatta","Alouatta macconnelli","Alouatta macconnelli","Guariba, Guariba-vermelha","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Leontocebus","Leontocebus fuscus","Saguinus fuscus","Sagui-de-cara-suja","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Chiropotes","Chiropotes chiropotes","Chiropotes chiropotes","Cuxiú","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus cinerascens","Callicebus cinerascens","Zogue-zogue, zogue-zogue cinza escuro","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus hoffmannsi","Callicebus hoffmannsi","Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Callicebus","Callicebus melanochir",NA,"Guigó, Sauá","Vulnerável","A4c"
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus moloch","Callicebus moloch","Sauá-de-barriga-vermelha, Sauá-moreno, Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Callicebus","Callicebus nigrifrons",NA,"Guigó, Sauá","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Cheracebus","Cheracebus regulus","Callicebus regulus","Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus stephennashi","Callicebus stephennashi","Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Pithecia","Pithecia vanzolinii","Pithecia irrorata vanzolinii","macaco-velho, Parauacu","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Leontopithecus","Leontopithecus chrysomelas",NA,"Mico-leão-da-cara-dourada","Em Perigo","C2a(i)"
+"Mammalia","Primates","Aotidae","Aotus","Aotus nancymaae","Aotus nancymaae","Macaco-da-noite, Macaco-da-noite-de-pescoço-vermelho","Menos Preocupante",NA
+"Mammalia","Primates","Aotidae","Aotus","Aotus vociferans","Aotus vociferans","Macaco-da-noite, Macaco-da-noite-de-pescoço-cinza","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Cacajao","Cacajao rubicundus","Cacajao calvus rubicundus","Uacari, uacari-vermelho","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Cacajao","Cacajao ouakary","Cacajao melanocephalus","Uacari-preto","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Cebuella","Cebuella niveiventris","Cebuella pygmaea niveiventris","Mico-leãozinho, Sagui-leãozinho, Sagui-pigmeu","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Cacajao","Cacajao ayresi","Cacajao ayresi","bicó, Uacari-de-Ayres, uacari-preto","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Cryptonanus","Cryptonanus unduaviensis",NA,NA,"Menos Preocupante",NA
+"Mammalia","Primates","Aotidae","Aotus","Aotus azarae",NA,"Macaco-da-noite, Macaco-da-noite-de-pescoço-vermelho","Dados Insuficientes",NA
+"Mammalia","Cetartiodactyla","Cervidae","Blastocerus","Blastocerus dichotomus","Blastocerus dichotomus",NA,"Vulnerável","A3bc"
+"Mammalia","Cetartiodactyla","Cervidae","Mazama","Mazama gouazoubira","Mazama gouazoubira","Corça, Veado-catingueiro","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Tinamus","Tinamus guttatus","Tinamus guttatus","inhambu-galinha","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus atrocapillus","Crypturellus atrocapillus","inhambu-de-coroa-preta","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Ortalis","Ortalis motmot","Ortalis motmot","aracuã-pequeno","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Nothocrax","Nothocrax urumutum","Nothocrax urumutum","urumutum","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Crax","Crax alector","Crax alector","mutum-poranga","Menos Preocupante",NA
+"Mammalia","Carnivora","Felidae","Leopardus","Leopardus tigrinus","Leopardus tigrinus","Gato-do-mato, Gato-maracajá, gato-maracajá-mirim, Pintadinho","Em Perigo","A2b"
+"Mammalia","Carnivora","Canidae","Lycalopex","Lycalopex gymnocercus","Lycalopex gymnocercus","Cachorro do Campo, graxaim-do-campo, raposa-do-campo, Rasposa do Mato","Menos Preocupante",NA
+"Mammalia","Carnivora","Canidae","Lycalopex","Lycalopex vetulus",NA,"Raposa-do-campo, raposinha, raposinha-do-campo","Vulnerável","A2c+3cd"
+"Mammalia","Carnivora","Procyonidae","Nasua","Nasua nasua","Nasua nasua","Coati, Quati, Quati-de-vara, Quati-mundéo","Menos Preocupante",NA
+"Mammalia","Carnivora","Felidae","Herpailurus","Herpailurus yagouaroundi","Puma yagouaroundi","Gato-azul, Gato-mourisco, Gato-vermelho, Jaguarundi","Vulnerável","A4bcd"
+"Mammalia","Carnivora","Canidae","Atelocynus","Atelocynus microtis","Atelocynus microtis","cachorro-do-mato-de-orelhas-curtas","Vulnerável","A4c"
+"Mammalia","Cingulata","Dasypodidae","Tolypeutes","Tolypeutes matacus","Tolypeutes matacus","Tatu-bola","Quase Ameaçada",NA
+"Aves","Galliformes","Cracidae","Penelope","Penelope pileata","Penelope pileata","jacupiranga","Vulnerável","A2cd"
+"Aves","Gruiformes","Psophiidae","Psophia","Psophia dextralis","Psophia dextralis","jacamim-de-costas-marrons","Vulnerável","A2cd"
+"Mammalia","Pilosa","Myrmecophagidae","Tamandua","Tamandua tetradactyla","Tamandua tetradactyla","lapichau, Mambira, Meleta, Tamanduá-de-colete, Tamanduá-mirim","Menos Preocupante",NA
+"Mammalia","Cingulata","Dasypodidae","Tolypeutes","Tolypeutes tricinctus","Tolypeutes tricinctus","Bola, Bolinha, Tatu-apara, Tatu-bola","Em Perigo","B2ab(i,ii,iii)"
+"Mammalia","Cingulata","Dasypodidae","Dasypus","Dasypus kappleri","Dasypus kappleri","Tatu-açu, Tatu-canastra, Tatu-quinze-quilos, Tatu-tinga, Tatu-verdadeiro","Menos Preocupante",NA
+"Mammalia","Cingulata","Dasypodidae","Euphractus","Euphractus sexcinctus","Euphractus sexcinctus","Tatu-papa-defunto, Tatu-peba, Tatu-peludo, Tatu-testa-de-ferro","Menos Preocupante",NA
+"Mammalia","Cingulata","Dasypodidae","Dasypus","Dasypus pastasae",NA,"Tatu-quinze-quilos","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Caluromys","Caluromys lanatus","Caluromys lanatus","Cuíca-lanosa, Gambazinho, Mucura-xixica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Cryptonanus","Cryptonanus chacoensis","Cryptonanus chacoensis","Catita, Guaiquica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Didelphis","Didelphis imperfecta","Didelphis imperfecta","Gambá, mucura","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Callistomys","Callistomys pictus","Callistomys pictus","Rato-do-cacau, Saruê-beiju, Saruê-beju","Em Perigo","B1ab(i,ii,iii)"
+"Mammalia","Didelphimorphia","Didelphidae","Glironia","Glironia venusta","Glironia venusta","Cuíca","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Gracilinanus","Gracilinanus microtarsus","Gracilinanus microtarsus","Catita, Cuíca, Cuica-graciosa, Guaiquica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa constantiae","Marmosa constantiae","Cuíca","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa macrotarsus","Marmosa macrotarsus","Cuíca, Marmosa","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa rutteri","Marmosa regina","Cuíca","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosops","Marmosops bishopi","Marmosops bishopi","Cuíca, Marmosa","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosops","Marmosops caucae","Marmosops neblina","Cuíca, Neblina slender opossum","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosops","Marmosops ocellatus","Marmosops ocellatus","Cuíca, Marmosa, Santa Cruz slender opossum","Dados Insuficientes",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou nycthemera","Coendou nycthemera","Black Dwarf Porcupine, Koopman's Porcupine, Ouriço, Porco-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou speratus",NA,"Coandu-mirim, Ouriço-cacheiro","Em Perigo","B1ab(iii)"
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis kunsi","Monodelphis kunsi","Catita, Cuica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis scalops","Monodelphis scalops","Catita-de-listras","Menos Preocupante",NA
+"Mammalia","Rodentia","Cuniculidae","Cuniculus","Cuniculus paca","Cuniculus paca","Paca","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Dactylomys","Dactylomys dactylinus","Dactylomys dactylinus","Amazon Bamboo Rat, Rato-do-bambu, Toró","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Dasyprocta","Dasyprocta leporina","Dasyprocta leporina","Cutia","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Dasyprocta","Dasyprocta prymnolopha","Dasyprocta prymnolopha","Black-rumped Agouti, Cutia","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Thylamys","Thylamys karimii","Thylamys karimii","Catita, Cuíca-de-rabo-grosso, Dwarf Thylamys","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Euryzygomatomys","Euryzygomatomys spinosus","Euryzygomatomys spinosus","Guiara, Guirá, Rata guira, Ratón espinoso","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys albispinus","Trinomys albispinus","Rato-do-espinho, White-spined Atlantic Spiny-rat, White-spined Spiny Rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys dimidiatus","Trinomys dimidiatus","Rato-do-espinho, Rio de Janeiro Spiny Rat, Soft-spined Atlantic Spiny-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys eliasi","Trinomys eliasi","Elias Atlantic Spiny-rat, Rato-do-espinho","Vulnerável","B1ab(iii)+2ab(iii)"
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys iheringi","Trinomys iheringi","Ihering’s Atlantic Spiny-rat, Rato-do-espinho, São Paulo Spiny Rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys moojeni","Trinomys moojeni","Moojen’s Atlantic Spiny-rat, Rato-de-espinho","Em Perigo","B1ab(iii)+2ab(iii)"
+"Mammalia","Rodentia","Echimyidae","Thrichomys","Thrichomys fosteri","Thrichomys fosteri","Punaré","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Thrichomys","Thrichomys inermis","Thrichomys inermis","Highlands Punaré, Jacobina Punaré, Punaré, Rabudo","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Thrichomys","Thrichomys laurentius","Thrichomys laurentius","Punaré, Rabudo, São Lourenço’s Punaré","Menos Preocupante",NA
+"Mammalia","Lagomorpha","Leporidae","Sylvilagus","Sylvilagus brasiliensis","Sylvilagus brasiliensis","Coelho","Dados Insuficientes",NA
+"Mammalia","Rodentia","Echimyidae","Isothrix","Isothrix bistriata","Isothrix bistriata","Rato-coró, Yellow-crowned Brush-tailed Rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Caviidae","Kerodon","Kerodon acrobata","Kerodon acrobata","Climbing Cavy, Mocó","Vulnerável","B1ab(iii)"
+"Mammalia","Rodentia","Caviidae","Kerodon","Kerodon rupestris",NA,"Mocó, Rock cavy","Vulnerável","A2d"
+"Mammalia","Rodentia","Echimyidae","Lonchothrix","Lonchothrix emiliae","Lonchothrix emiliae","Rato-de-espinho, Tuft-tailed Spiny Tree-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Mesomys","Mesomys occultus","Mesomys occultus","Rato-do-espinho, Tufted-tailed Spiny Tree-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Sciuridae","Microsciurus","Microsciurus flaviventer","Microsciurus flaviventer","Amazon Dwarf Squirrel, Quatipuruzinho-bigodeiro","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Myoprocta","Myoprocta pratti","Myoprocta pratti","Cotiara, Cutiara, Green Acouchi","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys echinothrix","Proechimys echinothrix","Rato-do-espinho, Stiff-spine Spiny-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys guyannensis","Proechimys guyannensis","Soiá","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys pattoni","Proechimys pattoni","Patton’s Spiny-rat, Rato-do-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys lundi",NA,"Lund’s Atlantic tree-rat, Rato-da-árvore","Em Perigo","B2ab(iii,iv)"
+"Mammalia","Rodentia","Sciuridae","Hadrosciurus","Hadrosciurus ignitus","Notosciurus pucheranii","Esquilo","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Crax","Crax blumenbachii","Crax blumenbachii","mutum-de-bico-vermelho, mutum-do-sudeste","Em Perigo","C2a(i)"
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis saci",NA,NA,"Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys gratiosus",NA,NA,"Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Penelope","Penelope superciliaris","Penelope superciliaris","jacupemba","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus variegatus","Crypturellus variegatus","inhambu-anhangá","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Penelope","Penelope obscura","Penelope obscura","jacuaçu","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Saguinus","Saguinus ursulus",NA,NA,"Quase Ameaçada",NA
+"Mammalia","Primates","Callitrichidae","Saguinus","Saguinus niger",NA,"guaribinha, Sagui-una","Vulnerável","A4c"
+"Mammalia","Primates","Callitrichidae","Leontocebus","Leontocebus cruzlimai","Saguinus fuscicollis cruzlimai","Sagui-da-cara-suja, Sauim vermelho","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico acariensis","Mico acariensis","Sagui-do-rio-Acari","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico chrysoleucos","Mico chrysoleucos","Sagui-de-tufos-brancos","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico intermedius","Mico intermedius","sagui-do-Rio-Aripuanã, Sagui-intermédio","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico mauesi","Mico mauesi","Sagui-de-Maués, Sagui-de-tufos","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico nigriceps","Mico nigriceps","Sagui-de-cabeça-preta","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Cebus","Cebus yuracus","Cebus cuscinus","Caiarara","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Cebus","Cebus unicolor","Cebus unicolor","Caiarara","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Saimiri","Saimiri cassiquiarensis","Saimiri cassiquiarensis","Macaco-de-cheiro","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Saimiri","Saimiri sciureus","Saimiri sciureus","Amarelinho, Capijuba, Macaco-de-cheiro, Mão-de-ouro, Mico-de-cheiro","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Callithrix","Callithrix flaviceps",NA,"Sagui-da-serra, Sagui-da-serra-claro, Sagui-taquara","Em Perigo","C1+2a(i)"
+"Mammalia","Primates","Callitrichidae","Callithrix","Callithrix geoffroyi","Callithrix geoffroyi","Sagui-da-cara-branca","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Callithrix","Callithrix jacchus","Callithrix jacchus","mico, mico-estrela, nico, sagui, sagui-comum, sagui-de-tufo-branco, Sagui-do-nordeste","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Saguinus","Saguinus inustus","Saguinus inustus","Sagui","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Saguinus","Saguinus labiatus","Saguinus labiatus labiatus","Sagui-de-boca-branca","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Saguinus","Saguinus martinsi","Saguinus martinsi martinsi","Morceguinho (rio Nhamundá), Sauim","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Saguinus","Saguinus midas","Saguinus midas","Sagui-da-mão-dourada","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Chiropotes","Chiropotes albinasus","Chiropotes albinasus","Cuxiú-de-nariz-vermelho","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Callicebus","Callicebus brunneus",NA,"Zogue-zogue","Quase Ameaçada",NA
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus cupreus","Callicebus cupreus","Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus donacophilus","Callicebus donacophilus","Boca d’água, guigó, sauá, zogue-zogue","Não Aplicável",NA
+"Mammalia","Primates","Pitheciidae","Cheracebus","Cheracebus purinus","Callicebus purinus","sauá-de-colar, Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Pithecia","Pithecia chrysocephala","Pithecia pithecia chrysocephala","Parauacu-da-cara-branca","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Pithecia","Pithecia pithecia","Pithecia pithecia pithecia","Parauacu-da-cara-branca","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Leontopithecus","Leontopithecus caissara","Leontopithecus caissara","Mico-leão-da-cara-preta","Em Perigo","C2a(i); D"
+"Mammalia","Primates","Callitrichidae","Leontopithecus","Leontopithecus chrysopygus","Leontopithecus chrysopygus","Mico-leão-preto, Sauim-preto","Em Perigo","B2ab(ii,iii,v)"
+"Mammalia","Primates","Callitrichidae","Leontopithecus","Leontopithecus rosalia",NA,"Mico-leão-dourado, Sauim-piranga","Em Perigo","B2ab(iii)"
+"Mammalia","Primates","Cebidae","Sapajus","Sapajus libidinosus",NA,"Macaco-prego, Macaco-prego-amarelo","Quase Ameaçada",NA
+"Mammalia","Primates","Cebidae","Sapajus","Sapajus nigritus","Sapajus nigritus nigritus","Macaco-prego, mico","Quase Ameaçada",NA
+"Mammalia","Primates","Cebidae","Cebus","Cebus olivaceus","Cebus olivaceus castaneus","Caiarara, Cairara, Macaco-prego","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Metachirus","Metachirus myosuros",NA,"Cuíca-cauda-de-rato","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico munduruku",NA,"sagui-dos-Munduruku","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Gracilinanus","Gracilinanus peruanus",NA,NA,"Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Cebuella","Cebuella pygmaea","Cebuella pygmaea pygmaea","Mico-leãozinho, Sagui-leãozinho, Sagui-pigmeu","Menos Preocupante",NA
+"Mammalia","Primates","Atelidae","Alouatta","Alouatta seniculus",NA,"Bugio-vermelho, Guariba-vermelho","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou ichillus",NA,"Coandu-pigmeu","Menos Preocupante",NA
+"Mammalia","Cetartiodactyla","Cervidae","Mazama","Mazama jucunda","Mazama bororo","Veado-bororó de São Paulo, Veado-mateiro-pequeno, Veado-vermelho","Quase Ameaçada",NA
+"Mammalia","Cetartiodactyla","Cervidae","Mazama","Mazama nemorivaga","Mazama nemorivaga","Fuboca, Veado-branco, Veado-da-amazônia, Veado-roxo","Dados Insuficientes",NA
+"Mammalia","Cetartiodactyla","Cervidae","Ozotoceros","Ozotoceros bezoarticus",NA,"Veado-branco, Veado-campeiro, Veado-galheiro","Menos Preocupante",NA
+"Mammalia","Cetartiodactyla","Tayassuidae","Pecari","Pecari tajacu","Pecari tajacu","Caititu, Cateto","Menos Preocupante",NA
+"Mammalia","Cetartiodactyla","Tayassuidae","Tayassu","Tayassu pecari","Tayassu pecari","Queixada","Vulnerável","A4cd"
+"Aves","Galliformes","Cracidae","Aburria","Aburria cumanensis","Aburria cumanensis","cajubi, cujubi-de-barbela-fina, cujubim, jacutinga, jacutinga-de-garganta-azul","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Tinamus","Tinamus major","Tinamus major","inhambu-de-cabeça-vermelha","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus erythropus","Crypturellus erythropus","inhambu-de-perna-vermelha","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus bartletti","Crypturellus bartletti","inhambu-anhangaí","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Penelope","Penelope marail","Penelope marail","jacumirim","Menos Preocupante",NA
+"Aves","Gruiformes","Psophiidae","Psophia","Psophia crepitans","Psophia crepitans","jacamim-de-costas-cinzentas","Menos Preocupante",NA
+"Mammalia","Carnivora","Felidae","Leopardus","Leopardus geoffroyi","Leopardus geoffroyi","Gato-do-mato, Gato-do-mato-grande","Vulnerável","A4de"
+"Mammalia","Carnivora","Felidae","Leopardus","Leopardus guttulus",NA,"Gato-do-mato","Vulnerável","C1"
+"Mammalia","Carnivora","Mustelidae","Lontra","Lontra longicaudis","Lontra longicaudis","lobinho-de-rio, Lontra, lontra neotropical, lontrinha","Menos Preocupante",NA
+"Mammalia","Carnivora","Procyonidae","Potos","Potos flavus","Potos flavus","gatiara, janaú, jupará, Jupará, jurupará e macaco da noite por gogó-de-sola, macaco-janauí/janauaí/januí e miru-miru","Menos Preocupante",NA
+"Mammalia","Carnivora","Procyonidae","Procyon","Procyon cancrivorus","Procyon cancrivorus","cachorrinho-guaxinim, cachorro-do-mato-guaxinim, cangrejera, guará, Guaxinim, jaracambeva, mão pelada, mapache lavador, mayuato, meia-noite","Menos Preocupante",NA
+"Mammalia","Carnivora","Mustelidae","Pteronura","Pteronura brasiliensis",NA,"Ariranha, lontra gigante, onça-d’água","Vulnerável","A3cd"
+"Aves","Tinamiformes","Tinamidae","Nothura","Nothura maculosa","Nothura maculosa","codorna-amarela","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Ortalis","Ortalis superciliaris","Ortalis superciliaris","aracuã-de-sobrancelhas","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Penelope","Penelope ochrogaster","Penelope ochrogaster","jacu-de-barriga-castanha","Quase Ameaçada",NA
+"Mammalia","Cetartiodactyla","Cervidae","Ozotoceros","Ozotoceros bezoarticus bezoarticus","Ozotoceros bezoarticus bezoarticus","Veado-campeiro; Veado-branco; Veado-galheiro","Vulnerável","A2c"
+"Mammalia","Pilosa","Myrmecophagidae","Myrmecophaga","Myrmecophaga tridactyla",NA,"bandeira, Bandurra, Jurumi, jurumim, Papa-formigas, tamanduá-açú, Tamanduá-bandeira","Vulnerável","A2c"
+"Mammalia","Pilosa","Megalonychidae","Choloepus","Choloepus didactylus","Choloepus didactylus","Preguiça-real, Unau","Menos Preocupante",NA
+"Mammalia","Pilosa","Bradypodidae","Bradypus","Bradypus variegatus","Bradypus variegatus","Preguiça-comum, Preguiça-de-bentinho, Preguiça-de-óculos, Preguiça-marmota","Menos Preocupante",NA
+"Mammalia","Cingulata","Dasypodidae","Dasypus","Dasypus novemcinctus","Dasypus novemcinctus","Tatu-asa-branca, Tatuetê, Tatu-folha, Tatu-galinha, Tatu-nove-bandas, Tatu-veado, Tatu-verdadeiro","Menos Preocupante",NA
+"Mammalia","Pilosa","Cyclopedidae","Cyclopes","Cyclopes ida",NA,"Tamanduaí","Menos Preocupante",NA
+"Mammalia","Cingulata","Dasypodidae","Dasypus","Dasypus beniensis",NA,"Tatu-quinze-quilos","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Cryptonanus","Cryptonanus guahybae","Cryptonanus guahybae","Catita, Guaiquica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Gracilinanus","Gracilinanus emiliae","Gracilinanus emiliae","Catita, Cuíca, Guaiquica","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa demerarae","Marmosa demerarae","Cuíca","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa paraguayana","Marmosa paraguayana","Cuíca, Guaiquica-cinza, Tate’s wooly mouse opossum","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosops","Marmosops paulensis","Marmosops paulensis","Brazilian slender opossum, Marmosa","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Clyomys","Clyomys laticeps","Clyomys laticeps","Broad-headed Spiny-rat, Rato-do-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou bicolor","Coendou bicolor","Bicolor-spined Porcupine, Ouriço-cacheiro","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou melanurus","Coendou melanurus","Black-tailed Hairy Dwarf Porcupine, Ouriço-cacheiro","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou roosmalenorum","Coendou roosmalenorum","Ouriço-cacheiro, Porcupine, Roosmalen's Dwarf Porcupine, Roosmalen’s Hairy Dwarf, Roosmalen's Porcupine","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis dimidiata","Monodelphis dimidiata","Catita, Guaiquica-anã","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Monodelphis","Monodelphis touan","Monodelphis touan","Catita","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Philander","Philander opossum","Philander opossum","Carachupa, Cucha gris de cuatro ojos, Cuíca-de-quatro-olhos, Gray Four-eyed Opossum, Guaiki, Mucura-de-quatro-olhos, Pericote, Quica opossum, Rabipelao, Rajá, Raposa huevera, Zorro","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Dasyprocta","Dasyprocta catrinae","Dasyprocta catrinae",NA,"Dados Insuficientes",NA
+"Mammalia","Rodentia","Dasyproctidae","Dasyprocta","Dasyprocta fuliginosa","Dasyprocta fuliginosa","Black Agouti, Cutia","Menos Preocupante",NA
+"Mammalia","Rodentia","Dasyproctidae","Dasyprocta","Dasyprocta nigriclunis","Dasyprocta nigriclunis","Cutia, Highland Black-rumped Agouti","Menos Preocupante",NA
+"Mammalia","Rodentia","Dinomyidae","Dinomys","Dinomys branickii","Dinomys branickii","Paca de rabo, Pacarana","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Thylamys","Thylamys velutinus","Thylamys velutinus","Catita, Dwarf mouse opossum","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Echimys","Echimys chrysurus","Echimys chrysurus","Rato-da-árvore, White-faced Spiny Tree-rat, White-faced Tree Rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Echimys","Echimys vieirai","Echimys vieirai","Rato-da-árvore, Vieira’s Spiny Tree-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Sciuridae","Guerlinguetus","Guerlinguetus aestuans","Guerlinguetus aestuans","Caxinguelê, Esquilo, Guianan Squirrel, Quatipuru","Menos Preocupante",NA
+"Mammalia","Rodentia","Sciuridae","Guerlinguetus","Guerlinguetus brasiliensis","Guerlinguetus brasiliensis","Esquilo, Quatipuru-pequeno, Serelepe","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys mirapitanga",NA,"Dark-caped Atlantic Spiny-rat, Rato-do-espinho","Em Perigo","B1ab(iii)"
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys yonenagae",NA,"Rato-do-espinho, Yonenaga’s Atlantic Spiny-rat","Em Perigo","B1ab(ii,iii)"
+"Mammalia","Rodentia","Sciuridae","Hadrosciurus","Hadrosciurus pyrrhinus","Hadrosciurus pyrrhinus","Esquilo, Junín Red Squirrel, Quatipuru","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Thrichomys","Thrichomys apereoides","Thrichomys apereoides","Common Punaré, Punaré, Rabudo","Menos Preocupante",NA
+"Mammalia","Rodentia","Caviidae","Hydrochoerus","Hydrochoerus hydrochaeris","Hydrochoerus hydrochaeris","Capivara","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Isothrix","Isothrix negrensis","Isothrix negrensis","Rato-coró, Rio Negro Brush-tailed Rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Isothrix","Isothrix pagurus","Isothrix pagurus","Plain Brush-tailed Rat, Rato-coró","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Makalata","Makalata didelphoides","Makalata didelphoides","Rato-coró, Red-nosed Armored Tree-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Makalata","Makalata macrura","Makalata macrura","Long-tailed Armored Tree-rat, Rato-coró","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Myocastor","Myocastor coypus","Myocastor coypus","Coypu, Cujá, Nutria, Pacão, Ratão-do-banhado","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys brevicauda","Proechimys brevicauda","Huallaga Spiny Rat, Rato-de-espinho, Short-tailed Spiny-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys gardneri","Proechimys gardneri","Gardner’s Spiny-rat, Rato-de-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys kulinae","Proechimys kulinae",NA,"Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys quadruplicatus","Proechimys quadruplicatus","Napo Spiny-rat, Rato-do-espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Proechimys","Proechimys steerei","Proechimys steerei","Rato-do-espinho, Steere’s Spiny-rat","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys brasiliensis","Phyllomys brasiliensis","Orange-brown Atlantic tree-rat, Rato-da-árvore","Em Perigo","B1ab(ii,iii)+2ab(ii,iii)"
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys medius","Phyllomys medius","Long-furred Atlantic Tree-rat, Rato-da-árvore","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Phyllomys","Phyllomys nigrispinus","Phyllomys nigrispinus","Black-spined Atlantic Tree-rat, Rato-da-árvore","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Carterodon","Carterodon sulcidens","Carterodon sulcidens","Rato-do-mato; Rato-de-espinho","Dados Insuficientes",NA
+"Mammalia","Rodentia","Caviidae","Cavia","Cavia fulgida","Cavia fulgida","Preá","Menos Preocupante",NA
+"Mammalia","Rodentia","Caviidae","Cavia","Cavia magna","Cavia magna","Apereá de dorso oscuro, Preá","Quase Ameaçada",NA
+"Mammalia","Rodentia","Echimyidae","Toromys","Toromys grandis","Toromys grandis","Giant Tree-rat, Rato-da-árvore","Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Pauxi","Pauxi mitu","Pauxi mitu","mutum-do-nordeste","Extinta na Natureza",NA
+"Aves","Rheiformes","Rheidae","Rhea","Rhea americana","Rhea americana","ema","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus parvirostris","Crypturellus parvirostris","inambu-chororó","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus soui","Crypturellus soui","tururim","Menos Preocupante",NA
+"Aves","Tinamiformes","Tinamidae","Crypturellus","Crypturellus tataupa","Crypturellus tataupa","inambu-chintã","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Callibella","Callibella humilis","Callibella humilis","Sagui","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico argentatus","Mico argentatus","Sagui-argênteo","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico emiliae","Mico emiliae","Sagui-de-snethlage","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico leucippe","Mico leucippe","Sagui-de-orelha-nua-branco, Souim-branco","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Mico","Mico melanurus","Mico melanurus","Sagui-marrom","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Saimiri","Saimiri collinsi","Saimiri collinsi","Macaco-de-cheiro, Macaco-mão-de-ouro","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Saimiri","Saimiri macrodon","Saimiri macrodon","Macaco-de-cheiro","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Saimiri","Saimiri ustus","Saimiri ustus","Macaco-de-cheiro, Mico-de-cheiro","Menos Preocupante",NA
+"Mammalia","Primates","Cebidae","Saimiri","Saimiri vanzolinii",NA,"Macaco-de-cheiro-de-cabeça-preta","Vulnerável","D2"
+"Mammalia","Primates","Cebidae","Sapajus","Sapajus flavius","Sapajus flavius","Macaco, Macaco-prego, Macaco-prego-galego","Em Perigo","B2ab(iii,v); C2a(i)"
+"Mammalia","Primates","Cebidae","Sapajus","Sapajus xanthosternos","Sapajus xanthosternos","Macaco prego do peito amarelo, Macaco-prego-do-peito-amarelo","Em Perigo","C2a(i)"
+"Mammalia","Primates","Atelidae","Brachyteles","Brachyteles arachnoides","Brachyteles arachnoides","Buriqui, Buriquim, Mariquina, Mono, Mono-carvoeiro, Muriqui-do-sul, Muriquina, Muriquinina","Em Perigo","A4cd"
+"Mammalia","Primates","Atelidae","Alouatta","Alouatta caraya",NA,"Barbado, Bugio-preto, Guariba-preto","Quase Ameaçada",NA
+"Mammalia","Primates","Callitrichidae","Callimico","Callimico goeldii","Callimico goeldii","Calimico, Macaco-de-Goeldi, Mico-preto, Sagui-de-Goeldi, Soim-preto, Taboqueiro","Menos Preocupante",NA
+"Mammalia","Primates","Callitrichidae","Leontocebus","Leontocebus weddelli","Saguinus weddelli weddelli","Sagüi, Sagui-preto, Sauim, Soim, Soim preto, Soim vermelho","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Chiropotes","Chiropotes sagulatus","Chiropotes sagulatus","Cuxiú","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus baptista","Callicebus baptista","Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Callicebus","Callicebus bernhardi",NA,"Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Callicebus","Callicebus coimbrai","Callicebus coimbrai","Guigó, Guigó-de-Coimbra-Filho, Guigó de Sergipe","Em Perigo","C2a(i)"
+"Mammalia","Primates","Pitheciidae","Cheracebus","Cheracebus lucifer","Callicebus lucifer","Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Callicebus","Callicebus personatus","Callicebus personatus","Guigó, Guigó-mascarado, Sauá-de-cara-preta","Vulnerável","C2a(i)"
+"Mammalia","Primates","Pitheciidae","Plecturocebus","Plecturocebus vieirai","Callicebus vierai","Guigó, Sauá, Zogue-zogue","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Pithecia","Pithecia irrorata","Pithecia irrorata irrorata","Macaco-cabeludo, Macaco-velho, Parauacú","Menos Preocupante",NA
+"Mammalia","Primates","Pitheciidae","Pithecia","Pithecia monachus","Pithecia monachus","macaco-velho, macaco-voador, parauacu, Parauacu-monge","Menos Preocupante",NA
+"Mammalia","Primates","Aotidae","Aotus","Aotus nigriceps","Aotus nigriceps","Macaco-da-noite, Macaco-da-noite-de-pescoço-vermelho, Quatro-olhos","Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Philander","Philander pebas",NA,NA,"Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Philander","Philander canus",NA,NA,"Menos Preocupante",NA
+"Mammalia","Didelphimorphia","Didelphidae","Marmosa","Marmosa rapposa",NA,NA,"Dados Insuficientes",NA
+"Mammalia","Lagomorpha","Leporidae","Sylvilagus","Sylvilagus minensis",NA,NA,"Menos Preocupante",NA
+"Aves","Galliformes","Cracidae","Ortalis","Ortalis ruficeps",NA,"aracuãzinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Echimyidae","Trinomys","Trinomys elegans",NA,"Rato de Espinho","Menos Preocupante",NA
+"Mammalia","Rodentia","Erethizontidae","Coendou","Coendou longicaudatus",NA,"ouriço-de-cauda-longa","Menos Preocupante",NA

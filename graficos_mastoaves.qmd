@@ -1,0 +1,1647 @@
+---
+title: "Gráficos Relatório Monitora"
+subtitle: Componente Florestal
+author: "Arlindo Gomes Filho" # Autoria
+lang: pt # Linguagem em português
+date: "`r format(Sys.Date())`" # Data do relatório
+date-format: short # Formato de data curto: dd/MM/yyyy 
+toc: true # Adiciona um índice no relatório
+format: 
+    html: 
+      #code-fold: true # code-fold: true para "ocultar" o bloco de códigos
+      #code-tools: true  #code-tools: true para ativar ferramentas de interação com os códigos
+      theme: 
+        light: cosmo
+        dark: superhero # Sugestão: superhero/vapor - Mudar o tema do relatório aqui
+title-block-banner: "#BAEBEB" # Pode ser 'true', uma cor ou imagem
+code-annotations: hover # Para anotações em códigos
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: true
+---
+
+```{r pacotes}
+
+#install.packages("viridis")  # Install
+
+library(tidyverse)
+library(httr)
+library(lubridate)
+library(janitor)
+library(DT)
+library(plotly)
+library(RColorBrewer)
+library(viridis)
+library(cols4all) # Load
+library(ggExtra)
+
+```
+
+```{r dados}
+
+# Carregando dados
+
+masto_aves <-
+  read_csv2("dados_brutos/base_masto_aves_esforco_corrigido.csv")
+
+#View(masto_aves)
+#glimpse(masto_aves)
+
+```
+
+
+
+```{r palhetas de cores}
+
+# Criando palhetas de cores
+
+# cores = viridis(13)
+
+# cores <- brewer.pal(12, "Set3")
+
+# cores <- colorRampPalette(c("darkblue","lightblue"))
+
+# cores(13)
+
+cor3 <-
+  c(
+    "#008B8B",
+    "#129494",
+    "#259E9E",
+    "#38A8A8",
+    "#4AB1B1",
+    "#5DBBBB",
+    "#70C4C4",
+    "#82CECE",
+    "#95D8D8",
+    "#A8E2E2",
+    "#BAEBEB",
+    "#CDF5F5",
+    "#E0FFFF"
+  )
+
+cor4 <- c("#008B8B", "#BAEBEB", "#259E9E", "#E0FFFF", "#38A8A8", "#95D8D8")
+
+```
+
+
+
+# Gráficos registros por ordem
+
+
+
+## Gráfico rosca completo - todas as categorias
+
+```{r gráfico registros por ordem A, echo = FALSE}
+
+# Gráfico rosca reduzido - com a categoria "Outros"
+
+G1.1 <- masto_aves %>%
+  filter(!is.na(ordem)) %>%
+  group_by(ordem) %>%
+  summarise(count = n()) %>%
+  plot_ly(
+    labels = ~ ordem,
+    values = ~ count,
+    marker = list(colors = cor3)
+  ) %>%
+  add_pie(hole = 0.4)
+
+G1.1
+
+```
+
+
+## Gráfico rosca incompleto - com a categoria "Outros"
+
+
+```{r preparando os dados, include = FALSE}
+
+
+# Agrupando ordens e criando uma planilha com a categoria "Outros"
+
+masto_aves1 <- masto_aves |>
+  mutate(ordem = fct_infreq(ordem))
+
+fct_lump_n(masto_aves1$ordem, n = 4, other_level = "Outros")
+
+masto_aves1 <- masto_aves |>
+  mutate(ordem_lumped = fct_lump_n(masto_aves1$ordem,
+                                   n = 4,
+                                   other_level = "Outros"))
+
+#unique(masto_aves1$ordem_lumped)
+
+```
+
+```{r gráfico registros por ordem B, echo = FALSE}
+
+
+
+G1.2 <- masto_aves1 %>%
+  filter(!is.na(ordem_lumped)) %>%
+  group_by(ordem_lumped) %>%
+  summarise(count = n()) %>%
+  plot_ly(
+    labels = ~ ordem_lumped,
+    values = ~ count,
+    marker = list(colors = cor4)
+  ) %>%
+  add_pie(hole = 0.4)
+
+G1.2
+
+```
+
+
+
+## Gráfico registros por ordem - barras - escala logarítmica
+
+```{r gráfico registros por ordem - barras - escala logarítmica}
+
+
+# Gráfico de registros por ordem - barras - escala logarítmica
+
+G2.1 <- masto_aves %>%
+  filter(!is.na(ordem)) %>%
+  
+  group_by(ordem) %>%
+  summarise(count = n()) %>%
+  
+  ggplot(aes(x = fct_reorder(ordem, count, .desc = T), y = count)) +
+  geom_col(aes(fill = ordem)) +
+  coord_flip() +
+  scale_fill_manual(
+    values = c(
+      Primates = "#008B8B",
+      Rodentia = "#129494",
+      Tinamiformes = "#259E9E",
+      Galliformes = "#38A8A8",
+      Artiodactyla = "#4AB1B1",
+      Gruiformes = "#5DBBBB",
+      Carnivora = "#70C4C4",
+      Pilosa = "#82CECE",
+      Perissodactyla = "#95D8D8",
+      Cingulata = "#A8E2E2",
+      Didelphimorphia = "#BAEBEB",
+      Lagomorpha = "#CDF5F5",
+      Cariamiformes = "#E0FFFF"
+    )
+  ) +
+  scale_x_discrete(name = " ") +
+  #scale_y_continuous(name = " ") +
+  scale_y_log10(name = "Número de registros") +
+  theme_minimal() +
+  theme(
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  ) +
+  labs(title = "Distribuição dos registros por ordem",
+       y = "Número de registros")
+
+ggplotly(G2.1)
+
+```
+
+
+
+## Gráfico de registros por ordem - barras - escala normal
+
+```{r gráfico registros por ordem - barras - escala normal}
+
+
+G2.2 <-  masto_aves %>%
+  filter(!is.na(ordem)) %>%
+  group_by(ordem) %>%
+  summarise(count = n()) %>%
+  
+  ggplot(aes(x = fct_reorder(ordem, count, .desc = T), y = count)) +
+  # geom_col(aes(fill = ordem), fill = "cyan4") +
+  geom_col(aes(fill = ordem)) +
+  #geom_label(aes(label = count, hjust = -0.1)) +
+  scale_fill_manual(
+    values = c(
+      Primates = "#008B8B",
+      Rodentia = "#129494",
+      Tinamiformes = "#259E9E",
+      Galliformes = "#38A8A8",
+      Artiodactyla = "#4AB1B1",
+      Gruiformes = "#5DBBBB",
+      Carnivora = "#70C4C4",
+      Pilosa = "#82CECE",
+      Perissodactyla = "#95D8D8",
+      Cingulata = "#A8E2E2",
+      Didelphimorphia = "#BAEBEB",
+      Lagomorpha = "#CDF5F5",
+      Cariamiformes = "#E0FFFF"
+    )
+  ) +
+  coord_flip() +
+  scale_x_discrete(name = "") +
+  scale_y_continuous(name = " ") +
+  #scale_y_log10(name = " ") +
+  theme_minimal() +
+  theme(
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  ) +
+  scale_y_continuous(breaks = seq(0, 12000, by = 1000), name = "Número de registros") +
+  labs(title = "Distribuição dos registros por ordem",
+       y = "Número de registros")
+
+G2.2
+
+```
+
+# Gráficos taxas de encontro
+
+```{r estimativas taxas de encontro, include = FALSE}
+
+
+# Cálculo das taxas de encontro - ajustando os dados
+
+names(masto_aves) # checando os nomes das colunas
+
+masto_aves_esforco <-
+  masto_aves |> # preenchendo as linhas vazias de esforço
+  arrange(uc, ano, ea) |>
+  fill(esforco)
+
+View(masto_aves_esforco) # visualizando a nova planilha com a coluna de esforço
+# preenchida
+
+# Limpando a planilha / selecionando apenas algumas colunas
+
+masto_aves_esforco <- masto_aves_esforco |>
+  select(
+    cnuc,
+    uc,
+    ano,
+    ea,
+    everything(),
+    -c(
+      h_fim,
+      cond_clim,
+      populacao,
+      tempo_censo,
+      observadores,
+      problema_amostragem,
+      nome_ea,
+      h_inicio,
+      velocidade,
+      n_guia,
+      h_avistamento,
+      observacoes
+    )
+   )
+
+# Col_NAs <- select(masto_aves_esforco, where(anyNA)) # selecionando as colunas com NAs
+# Col_NAs
+#
+# View(masto_aves_esforco)
+#
+# Col_NAs <- select(masto_aves_esforco, where(anyNA)) |> # selecionando nomes das colunas com NAs
+#   names()
+# Col_NAs
+
+#glimpse(masto_aves_esforco)
+
+```
+
+
+```{r calculando o esfoço por trilha}
+
+
+### Calculando o esforço por trilha (ea)
+
+
+# Visualizando o esforço por trilha por dia em cada ano e UC
+
+#unique(masto_aves_esforco$esforco) # Valores únicos de esforço
+
+esforco_dia_trilha <- masto_aves_esforco  |> # extensão percorrida por dia
+  distinct(uc, ano, ea, data, esforco) 
+  
+
+#View(esforco_dia_trilha)
+
+
+esforco_dia_trilha_rep <- masto_aves_esforco  |> # número amostragens por trilha
+  distinct(uc, ano, ea, data, esforco) |> 
+  count(uc, ano, ea, esforco)
+
+#View(esforco_dia_trilha_rep)
+
+## Estimando o esforço total naquela trilha por ano por UC
+
+esforco_total_trilha <- esforco_dia_trilha |> # esforço total por trilha
+  group_by(uc, ano, ea) |>
+  summarise(extensao = sum(esforco))
+
+#View(esforco_total_trilha)
+
+# Checando trilhas com esforço > 50 km
+
+checando_trilhas <- esforco_total_trilha |>
+  filter(extensao > 50)
+
+# print(checando_trilhas, n = 70)
+# View(checando_trilhas)
+
+```
+
+
+
+```{r taxa de encontro total}
+
+
+## Calculando o número de registros total
+
+registros_total <- masto_aves_esforco |>
+  group_by(uc, ano, ea)  |>
+  count() |>
+  drop_na()
+
+#View(registros_total)
+
+# juntanto tabelas esforco + registros_total
+
+taxa_encontro_trilha_total <-
+  left_join(registros_total, esforco_total_trilha, c("uc", "ano", "ea"))
+
+#View(taxa_encontro_trilha_total)
+
+taxa_encontro_trilha_total <- taxa_encontro_trilha_total |>
+  mutate(taxa_encontro = (n / extensao) * 10)
+
+View(taxa_encontro_trilha_total)
+
+
+taxa_encontro_trilha_total_media <- taxa_encontro_trilha_total |>
+  group_by(uc, ano) |>
+  summarise(
+    n = n(),
+    taxa_enc_media = mean(taxa_encontro),
+    dp = sd(taxa_encontro),
+    ep = dp / (sqrt(n))
+  )
+
+
+View(taxa_encontro_trilha_total_media)
+
+
+```
+
+
+
+```{r calculo taxa de encontro média do período - 2014-2022}
+
+## Calculando o número de registros total
+
+registros_periodo_amostragem <- masto_aves_esforco |>
+  group_by(uc, ano)  |>
+  count() |>
+  drop_na()
+
+View(registros_periodo_amostragem)
+
+esforco_total_uc <- esforco_total_trilha |> 
+  group_by(uc, ano) |>
+  summarise(extensao_total = sum(extensao))
+
+View(esforco_total_uc)
+  
+
+# juntanto tabelas esforco + registros_total
+
+taxa_encontro_periodo_amostragem <-
+  left_join(registros_periodo_amostragem, esforco_total_uc, c("uc", "ano"))
+
+View(taxa_encontro_periodo_amostragem)
+
+taxa_encontro_periodo_amostragem <- taxa_encontro_periodo_amostragem |>
+  mutate(taxa_encontro = (n / extensao_total) * 10)
+
+View(taxa_encontro_periodo_amostragem)
+
+
+taxa_encontro_periodo_amostragem <- taxa_encontro_periodo_amostragem |>
+  group_by(uc) |>
+  summarise(
+    n = n(),
+    taxa_enc_media = mean(taxa_encontro),
+    dp = sd(taxa_encontro),
+    ep = dp / (sqrt(n))
+  )
+
+
+View(taxa_encontro_periodo_amostragem)
+
+
+```
+
+
+```{r gráfico taxa de encontro período de amostragem - 2014 - 2022}
+
+# Gráfico da taxa de encontro total por uc e por ano ano - mamíferos e aves juntos
+
+G_taxa_encontro_periodo_amostragem <- taxa_encontro_periodo_amostragem |>
+ 
+  ggplot(aes(
+    x = fct_reorder(uc, taxa_enc_media, .desc = T),
+    y = taxa_enc_media
+    
+  )) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro geral - mamíferos e aves - 2014 a 2022")
+
+
+G_taxa_encontro_periodo_amostragem
+
+
+
+```
+
+```{r gráfico taxa de encontro período de amostragem - 2014 - 2022 - pontos e desvios }
+
+# Gráfico da taxa de encontro total por uc e por ano ano - mamíferos e aves juntos
+
+G_taxa_encontro_periodo_amostragem <- taxa_encontro_periodo_amostragem |>
+ 
+  ggplot(aes(
+    x = fct_reorder(uc, taxa_enc_media, .desc = F),
+    y = taxa_enc_media
+    
+  )) +
+  geom_point(color = "cyan4", size = 1) +
+  geom_errorbar(
+    aes(ymin = taxa_enc_media - ep, ymax = taxa_enc_media + ep),
+    size = 0.8,
+    width = 0.025,
+    colour = "darkgreen"
+  ) +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro geral - mamíferos e aves - 2014 a 2022")
+
+
+G_taxa_encontro_periodo_amostragem
+
+
+```
+
+
+
+```{r taxa de encontro amostragem total por classe - 2014 a 2022}
+
+## Calculando o número de registros total
+
+registros_periodo_amostragem_classe <- masto_aves_esforco |>
+  group_by(uc, ano, classe)  |>
+  count() |>
+  drop_na()
+
+View(registros_periodo_amostragem_classe)
+
+esforco_total_uc <- esforco_total_trilha |> 
+  group_by(uc, ano) |>
+  summarise(extensao_total = sum(extensao))
+
+View(esforco_total_uc)
+  
+
+# juntanto tabelas esforco + registros_total
+
+taxa_encontro_periodo_amostragem_classe <-
+  left_join(registros_periodo_amostragem_classe, esforco_total_uc, c("uc", "ano"))
+
+View(taxa_encontro_periodo_amostragem_classe)
+
+taxa_encontro_periodo_amostragem_classe <- taxa_encontro_periodo_amostragem_classe |>
+  mutate(taxa_encontro = (n / extensao_total) * 10)
+
+View(taxa_encontro_periodo_amostragem_classe)
+
+
+taxa_encontro_periodo_amostragem_classe <- taxa_encontro_periodo_amostragem_classe |>
+  group_by(uc, classe) |>
+  summarise(
+    n = n(),
+    taxa_enc_media = mean(taxa_encontro),
+    dp = sd(taxa_encontro),
+    ep = dp / (sqrt(n))
+  )
+
+
+View(taxa_encontro_periodo_amostragem_classe)
+
+
+```
+
+
+```{r gráfico taxa de encontro total - 2014 a 2022 - mamíferos}
+
+# Gráfico da taxa de encontro total 2014 a 2022 - mamíferos
+
+G_taxa_encontro_periodo_amostragem_mamiferos <- taxa_encontro_periodo_amostragem_classe |>
+  filter(classe == "Mammalia") |> 
+ 
+  ggplot(aes(
+    x = fct_reorder(uc, taxa_enc_media, .desc = F),
+    y = taxa_enc_media
+    
+  )) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro geral - mamíferos - 2014 a 2022")
+
+
+G_taxa_encontro_periodo_amostragem_mamiferos
+
+
+
+```
+
+```{r gráfico taxa de encontro geral - 2014 a 2022 - aves}
+
+# Gráfico da taxa de encontro total 2014 a 2022 - aves
+
+G_taxa_encontro_periodo_amostragem_aves <- taxa_encontro_periodo_amostragem_classe |>
+  filter(classe == "Aves") |> 
+ 
+  ggplot(aes(
+    x = fct_reorder(uc, taxa_enc_media, .desc = F),
+    y = taxa_enc_media
+    
+  )) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name="Registros/10 km", limits=c(0, 20), breaks=c(0, 5, 10, 15, 20)) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro geral - aves - 2014 a 2022") 
+  
+
+
+G_taxa_encontro_periodo_amostragem_aves
+
+
+```
+
+
+
+```{r gráfico taxa de encontro total por uc por ano}
+
+# Gráfico da taxa de encontro total por uc e por ano ano - mamíferos e aves juntos
+
+G_taxa_encontro_total <- taxa_encontro_trilha_total_media |>
+  filter(ano == 2022) |>
+  
+  ggplot(aes(
+    x = fct_reorder(uc, taxa_enc_media, .desc = F),
+    y = taxa_enc_media
+    
+  )) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro total - mamíferos e aves - por UC - 2022")
+
+
+G_taxa_encontro_total
+
+```
+
+
+
+```{r taxa de encontro por classe}
+
+
+## Calculando o número de registros por classe, por trilha, por ano e por UC
+
+registros_classe <- masto_aves_esforco |>
+  group_by(uc, ano, ea, classe)  |>
+  count() |>
+  drop_na(classe)
+
+#View(registros_classe)
+
+
+
+# juntanto tabelas esforco + registros_classe
+
+taxa_encontro_trilha_classe <-
+  left_join(registros_classe, esforco_total_trilha, c("uc", "ano", "ea"))
+
+#View(taxa_encontro_trilha_classe)
+
+taxa_encontro_trilha_classe <- taxa_encontro_trilha_classe |>
+  mutate(taxa_encontro = (n / extensao) * 10)
+
+#View(taxa_encontro_trilha_classe)
+
+
+taxa_encontro_trilha_classe <- taxa_encontro_trilha_classe |>
+  group_by(uc, ano, classe) |>
+  summarise(
+    n = n(),
+    taxa_enc_media = mean(taxa_encontro),
+    desvio_padrao = sd(taxa_encontro),
+    erro_padrao = desvio_padrao / (sqrt(n))
+  )
+
+
+#View(taxa_encontro_trilha_classe)
+
+```
+
+
+# Gráficos da taxa de encontro por classe, por UC e por ano 
+
+# Gráfico da taxa de enconro por classe - pareado
+
+```{r grafico taxa de encontro por classe}
+
+
+# Gráfico da taxa de encontro por classes por ano - mamíferos e aves juntos
+
+G_taxa_encontro_classe <- taxa_encontro_trilha_classe |>
+  filter(ano == 2022) |>
+  
+  ggplot(aes(
+    x = fct_reorder(uc, taxa_enc_media, .desc = F),
+    y = taxa_enc_media,
+    group = classe,
+    fill = classe
+  )) +
+  geom_col(position = "dodge") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro de mamíferos e aves por UC - 2022")
+
+
+G_taxa_encontro_classe
+
+```
+
+
+# Gráfico da taxa de encontro de mamíferos por UC por ano
+
+```{r gráfico da taxa de encontro de mamíferos por ano}
+
+G_taxa_encontro_mamiferos <- taxa_encontro_trilha_classe |>
+  filter(ano == 2022 & classe == "Mammalia") |>
+  
+  ggplot(aes(x = fct_reorder(uc, taxa_enc_media, .desc = F), 
+             y = taxa_enc_media)) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  
+  # ggplot(aes(x = uc, y = taxa_enc_media)) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro de mamíferos por UC - 2022")
+
+
+G_taxa_encontro_mamiferos
+
+```
+
+
+```{r gráfico da taxa de encontro de aves por UC por ano}
+
+# Gráfico da taxa de encontro de aves por ano
+
+G_taxa_encontro_aves <- taxa_encontro_trilha_classe |>
+  filter(ano == 2022 & classe == "Aves") |>
+  
+  ggplot(aes(x = fct_reorder(uc, taxa_enc_media, .desc = F),
+             y = taxa_enc_media)) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name="Regsitros/10 km", limits=c(0, 20), breaks=c(0, 5, 10, 15, 20)) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro de aves por UC - 2022")
+
+
+G_taxa_encontro_aves
+
+```
+
+
+# Gráficos taxa de encontro por espécies
+
+
+```{r cálculos registros por espécie, por trilha, por ano e por UC}
+
+
+## Calculando o número de registros por espécie, por trilha, por ano e por UC
+
+registros_taxon_validado <- masto_aves_esforco |> 
+  group_by(uc, ano, ea, classe, taxon_validado) |>
+  count() |>
+  drop_na(taxon_validado)
+
+# View(registros_taxon_validado)
+
+
+# Juntanto tabelas esforco + registros_taxon_validado
+
+taxa_encontro_trilha_taxon_validado <-
+  left_join(registros_taxon_validado,
+            esforco_total_trilha,
+            c("uc", "ano", "ea"))
+
+#View(taxa_encontro_trilha_taxon_validado)
+
+taxa_encontro_trilha_taxon_validado <-
+  taxa_encontro_trilha_taxon_validado |>
+  mutate(taxa_encontro = (n / extensao) * 10)
+
+#View(taxa_encontro_trilha_taxon_validado)
+
+
+# Taxa de encontro de espécies por UC e por ano
+
+taxa_encontro_trilha_taxon_validado_ano <-
+  taxa_encontro_trilha_taxon_validado |>
+  group_by(uc, ano, classe, taxon_validado) |>
+  summarise(
+    n = n(),
+    taxa_enc_media = mean(taxa_encontro),
+    dp = sd(taxa_encontro),
+    ep = dp / (sqrt(n))
+  )
+
+
+View(taxa_encontro_trilha_taxon_validado_ano)
+
+
+# Taxa de encontro de espécies de mamíferos por UC
+
+taxa_encontro_trilha_taxon_validado_mamiferos <-
+  taxa_encontro_trilha_taxon_validado |>
+  filter(classe == "Mammalia") |> 
+  group_by(uc, taxon_validado) |>
+  summarise(
+    n = n(),
+    taxa_enc_media = mean(taxa_encontro),
+    desvio_padrao = sd(taxa_encontro),
+    erro_padrao = desvio_padrao / (sqrt(n))
+  ) 
+
+#View(taxa_encontro_trilha_taxon_validado_mamiferos)
+
+# Taxa de encontro de espécies de aves por UC
+
+taxa_encontro_trilha_taxon_validado_aves <-
+  taxa_encontro_trilha_taxon_validado |>
+  filter(classe == "Aves") |> 
+  group_by(uc, taxon_validado) |>
+  summarise(
+    n = n(),
+    taxa_enc_media = mean(taxa_encontro),
+    desvio_padrao = sd(taxa_encontro),
+    erro_padrao = desvio_padrao / (sqrt(n))
+  ) 
+
+#View(taxa_encontro_trilha_taxon_validado_aves)
+
+```
+
+
+# Gráfico taxa de encontro por ano por espécie e por UC
+
+```{r gráfico taxa de encontro espécies de mamíferos por ano por UC}
+
+
+## Taxa de encontro das espécies de mamíferos por ano por UC
+
+
+G_taxa_encontro_especies_mamiferos <-
+  taxa_encontro_trilha_taxon_validado_mamiferos|>
+  filter(uc == "Resex do Cazumbá-Iracema") |>
+  
+  ggplot(aes(
+    x = fct_reorder(taxon_validado, taxa_enc_media, .desc = F),
+    y = taxa_enc_media
+  )) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  
+  # ggplot(aes(x = uc, y = taxa_enc_media)) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text=element_text(size=6)) +
+  labs(title = "Taxa de encontro de mamíferos por UC")
+
+
+G_taxa_encontro_especies_mamiferos
+
+```
+ 
+
+
+```{r grafico taxa de encontro espécies de aves por ano por uc}
+
+
+# Taxa de encontro das espécies de aves por ano por UC
+
+
+G_taxa_encontro_especies_aves <-
+  taxa_encontro_trilha_taxon_validado_aves |>
+  filter(uc == "Resex do Cazumbá-Iracema") |>
+  
+  ggplot(aes(
+    x = fct_reorder(taxon_validado, taxa_enc_media, .desc = F),
+    y = taxa_enc_media
+  )) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  
+  # ggplot(aes(x = uc, y = taxa_enc_media)) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),) +
+  labs(title = "Taxa de encontro de aves por UC")
+
+
+G_taxa_encontro_especies_aves
+
+```
+
+
+```{r gráfico de espécies de mamíferos por UC por ano}
+
+## Taxa de encontro das espécies de mamíferos por ano por UC
+
+
+G_taxa_encontro_especies_mamiferos_uc_ano <-
+  taxa_encontro_trilha_taxon_validado_ano|>
+  filter(uc == "Resex do Cazumbá-Iracema" & ano == 2022 & classe == "Mammalia") |>
+  
+  ggplot(aes(
+    x = fct_reorder(taxon_validado, taxa_enc_media, .desc = F),
+    y = taxa_enc_media
+  )) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  
+  # ggplot(aes(x = uc, y = taxa_enc_media)) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),) +
+  labs(title = "Taxa de encontro de mamíferos por UC - RESEX Cazumbá 2022")
+
+
+G_taxa_encontro_especies_mamiferos_uc_ano
+
+```
+
+
+
+
+```{r gráfico de espécies de aves por UC por ano}
+
+G_taxa_encontro_especies_aves_uc_ano <-
+  taxa_encontro_trilha_taxon_validado_ano|>
+  filter(uc == "Resex do Cazumbá-Iracema" & ano == 2022 & classe == "Aves") |>
+  
+  ggplot(aes(
+    x = fct_reorder(taxon_validado, taxa_enc_media, .desc = F),
+    y = taxa_enc_media
+  )) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "Registros/10 km") +
+  
+  # ggplot(aes(x = uc, y = taxa_enc_media)) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),) +
+  labs(title = "Taxa de encontro de aves por UC - RESEX Cazumbá 2022")
+
+
+G_taxa_encontro_especies_aves_uc_ano
+
+
+
+```
+
+
+# Gráfico de espécie por UC por ano - RESEX Cazumbá 2022 Callicebus cupreus
+
+```{r gráfico por espécie por ano por UC - teste com RESEX do Cazumbá}
+
+
+G_taxa_encontro_especie <- taxa_encontro_trilha_taxon_validado_ano |>
+  filter(uc == "Resex do Cazumbá-Iracema" &
+           taxon_validado == "Callicebus cupreus") |>
+  
+  ggplot(aes(
+    x = ano,
+    y = taxa_enc_media,
+    group = taxon_validado,
+    col = taxon_validado
+  )) +
+  geom_line(colour = "cyan4") +
+  geom_point(color = "cyan4", size = 3) +
+  geom_errorbar(
+    aes(ymin = taxa_enc_media - ep, ymax = taxa_enc_media + ep),
+    size = 0.8,
+    width = 0.1,
+    colour = "darkgreen"
+  ) +
+  #geom_text(aes(label = n), vjust = -3) +
+  #ylim(0, 1.0) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor.y = element_blank(),
+    #panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    #panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  ) +
+  scale_color_viridis(discrete = T) +
+  labs(title = "Taxa de encontro por ano - Callicebus cupreus",
+       x = "Ano",
+       y = "Registros/10 km",
+       col = "Espécie")
+
+G_taxa_encontro_especie
+
+```
+ 
+
+
+## Taxa de encontro das espécies de mamíferos por ano por UC
+ 
+```{r gráfico das espécies de mamíferos por ano por UC - A}
+
+
+G_taxa_encontro_especies_mamiferos_ano <-
+  taxa_encontro_trilha_taxon_validado_ano |>
+  filter(uc == "Resex do Cazumbá-Iracema" &
+           classe == "Mammalia") |>
+
+  ggplot(aes(
+    x = ano,
+    y = taxa_enc_media,
+    group = taxon_validado,
+    col = taxon_validado
+  )) +
+  geom_line() +
+  geom_point(size = 3) +
+  #geom_errorbar(aes(ymin = taxa_enc_media - erro_padrao,
+  #ymax = taxa_enc_media + erro_padrao),
+  #size = 0.8, width = 0.1, colour = "darkgreen") +
+  #geom_text(aes(label = n), vjust = -3) +
+  #ylim(0, 0.75) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        #panel.grid.major.y = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        legend.text=element_text(size=5)) +
+        #panel.grid.major.x = element_blank(),
+        #legend.position = "none") +
+        #scale_color_viridis(discrete = T)) +
+          labs(title = "Taxa de encontro de mamíferos por ano - RESEX Cazumbá",
+               x = "Ano",
+               y = "Registros/10 km",
+               col = "Espécies")
+
+G_taxa_encontro_especies_mamiferos_ano
+
+```
+ 
+
+
+## Taxa de encontro das espécies de aves por ano por UC
+ 
+ 
+```{r gráfico espécies de aves por ano por UC - B}
+
+ 
+G_taxa_encontro_especies_aves_ano <-
+  taxa_encontro_trilha_taxon_validado_ano |>
+  filter(uc == "Resex do Cazumbá-Iracema" & classe == "Aves") |>
+
+  ggplot(aes(
+    x = ano,
+    y = taxa_enc_media,
+    group = taxon_validado,
+    col = taxon_validado
+  )) +
+  geom_line() +
+  geom_point(size = 3) +
+  #geom_errorbar(aes(ymin = taxa_enc_media - erro_padrao,
+  #ymax = taxa_enc_media + erro_padrao),
+  #size = 0.8, width = 0.1, colour = "darkgreen") +
+  #geom_text(aes(label = n), vjust = -3) +
+  #ylim(0, 0.5) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        #panel.grid.major.y = element_blank(),
+        panel.grid.minor.x = element_blank()) +
+        #panel.grid.major.x = element_blank(),
+        #legend.position = "none") +
+        #scale_color_viridis(discrete = T)) +
+          labs(title = "Taxa de encontro de aves por ano - RESEX Cazumbá",
+               x = "Ano",
+               y = "Registros/10 km",
+               col = "Espécies")
+
+G_taxa_encontro_especies_aves_ano
+
+```
+ 
+ 
+ 
+ ## Taxa de encontro das espécies de mamíferos por ano por UC
+ 
+ 
+```{r gráfico de espécies de mamíferos por ano por UC - A}
+
+
+G_taxa_encontro_especies_mamiferos_ano <-
+  taxa_encontro_trilha_taxon_validado_ano |>
+  filter(uc == "Resex do Cazumbá-Iracema" &
+           classe == "Mammalia") |>
+
+  ggplot(aes(
+    x = ano,
+    y = taxa_enc_media,
+    group = taxon_validado,
+    col = taxon_validado
+  )) +
+  geom_line() +
+  geom_point(size = 3) +
+  #geom_errorbar(aes(ymin = taxa_enc_media - erro_padrao,
+  #ymax = taxa_enc_media + erro_padrao),
+  #size = 0.8, width = 0.1, colour = "darkgreen") +
+  #geom_text(aes(label = n), vjust = -3) +
+  #ylim(0, 0.75) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        #panel.grid.major.y = element_blank(),
+        panel.grid.minor.x = element_blank()) +
+        #panel.grid.major.x = element_blank(),
+        #legend.position = "none") +
+        #scale_color_viridis(discrete = T)) +
+          labs(title = "Taxa de encontro de mamíferos por ano - interativo",
+               x = "Ano",
+               y = "Registros/10 km",
+               col = "Espécies")
+
+ggplotly(G_taxa_encontro_especies_mamiferos_ano)
+ 
+```
+ 
+ 
+ 
+## Taxa de encontro das espécies de mamíferos por ano por UC
+ 
+
+
+```{r gráfico mamíferos por ano por UC - A}
+
+
+G_taxa_encontro_especies_aves_ano <-
+  taxa_encontro_trilha_taxon_validado_ano |>
+  filter(uc == "Resex do Cazumbá-Iracema" & classe == "Aves") |>
+
+  ggplot(aes(
+    x = ano,
+    y = taxa_enc_media,
+    group = taxon_validado,
+    col = taxon_validado
+  )) +
+  geom_line() +
+  geom_point(size = 3) +
+  #geom_errorbar(aes(ymin = taxa_enc_media - erro_padrao,
+  #ymax = taxa_enc_media + erro_padrao),
+  #size = 0.8, width = 0.1, colour = "darkgreen") +
+  #geom_text(aes(label = n), vjust = -3) +
+  #ylim(0, 0.5) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        #panel.grid.major.y = element_blank(),
+        panel.grid.minor.x = element_blank()) +
+        #panel.grid.major.x = element_blank(),
+        #legend.position = "none") +
+        #scale_color_viridis(discrete = T)) +
+          labs(title = "Taxa de encontro de aves por ano - interativo",
+               x = "Ano",
+               y = "Registros/10 km",
+               col = "Espécies")
+
+ggplotly(G_taxa_encontro_especies_aves_ano)
+        
+        # Checagem Resex Cazumbá
+        
+        # cazumba <- masto_aves_esforco |>
+        #   filter(uc == "Resex do Cazumbá-Iracema" & ano == 2018 & ea == 1)
+        # View(cazumba)
+        #
+        # cazumba2 <- unique(cazumba$data)
+        # cazumba2
+
+```
+
+
+
+# Espécies ameaçadas
+
+
+
+```{r preparando os dados de espécies ameaçadas}
+
+
+lista_spp_ameacadas_salve <-
+  read_csv("dados_brutos/lista_spp_ameacadas_salve.csv")
+
+#View(lista_spp_ameacadas_salve)
+
+lista_spp_ameacadas_salve <- lista_spp_ameacadas_salve |>
+  rename(taxon_validado = nome_cientifico)
+
+taxa_encontro_spp_ameacadas <- left_join(taxa_encontro_trilha_taxon_validado, lista_spp_ameacadas_salve, by = "taxon_validado")
+
+View(taxa_encontro_spp_ameacadas)
+
+taxa_encontro_spp_ameacadas <- taxa_encontro_spp_ameacadas |>
+  select(-classe.y) |> 
+  rename(classe = classe.x) |> 
+  filter(!is.na(categoria))
+
+
+#View(taxa_encontro_spp_ameacadas)
+
+
+taxa_encontro_spp_ameacadas_uc <- taxa_encontro_spp_ameacadas |>
+  group_by(uc, taxon_validado) |> 
+  count()
+
+#View(taxa_encontro_spp_ameacadas_uc)
+
+
+# teste lef_join
+
+# A <- data.frame(colA = c("loja1", "loja2", "loja3", "loja4", "loja5", "loja6", "loja7", "loja8", "loja9", "loja10"),
+#                 colB = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+#                 
+# B <- data.frame(colC = c("violão", "guitarra", "piano", "baixo", "tamborim"),
+#                 colB = c(2, 3, 5, 7, 8))
+# 
+# C <- left_join(A, B, by = "colB")
+
+```
+
+
+```{r gráfico espécie ameaçada por UC}
+
+G_especie_ameacada_uc <- taxa_encontro_spp_ameacadas |>
+  group_by(uc) |> 
+  filter(taxon_validado == "Pauxi tuberosa") |>
+  
+  ggplot(aes(
+    x = uc,
+    y = taxa_encontro,
+    #group = taxon_validado,
+    #col = taxon_validado
+  )) +
+  geom_boxplot() +
+  coord_flip() +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        #panel.grid.major.y = element_blank(),
+        panel.grid.minor.x = element_blank()) +
+        #panel.grid.major.x = element_blank(),
+        #legend.position = "none") +
+        #scale_color_viridis(discrete = T)) +
+          labs(title = "Taxa de encontro de Pauxi tuberosa por UC",
+               x = " ",
+               y = "Registros/10 km")
+
+G_especie_ameacada_uc
+
+
+```
+
+
+```{r taxa de encontro média das UCs - Pauxi tuberosa}
+
+G_especie_ameacada_ucs_media_geral <- taxa_encontro_spp_ameacadas |>
+  group_by(uc) |> 
+  filter(taxon_validado == "Pauxi tuberosa") |>
+  summarise(n = n(),
+            taxa_enc_media = mean(taxa_encontro),
+            sd = sd(taxa_encontro),
+            ep = sd / sqrt(n)) |> 
+
+  ggplot(aes(
+    x = uc,
+    y = taxa_enc_media,
+    # group = taxon_validado,
+    # col = taxon_validado
+  )) +
+  geom_line(colour = "cyan4") +
+  geom_point(color = "cyan4", size = 3) +
+  geom_errorbar(
+    aes(ymin = taxa_enc_media - ep, ymax = taxa_enc_media + ep),
+    size = 0.8,
+    width = 0.1,
+    colour = "darkgreen"
+  ) +
+  coord_flip() +
+  #geom_text(aes(label = n), vjust = -3) +
+  #ylim(0, 1.0) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor.y = element_blank(),
+    #panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    #panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  ) +
+  scale_color_viridis(discrete = T) +
+  labs(title = "Taxa de encontro de Pauxi tuberosa por UC",
+       x = " ",
+       y = "Registros/10 km",
+       col = "Espécie")
+
+G_especie_ameacada_ucs_media_geral
+
+
+```
+
+
+
+
+
+```{r gráfico espécie ameaçada todas as UC por ano - uc médias e erros}
+
+G_especie_ameacada_ucs_media <- taxa_encontro_spp_ameacadas |>
+  group_by(ano) |> 
+  filter(taxon_validado == "Pauxi tuberosa") |>
+  summarise(n = n(),
+            taxa_enc_media = mean(taxa_encontro),
+            sd = sd(taxa_encontro),
+            ep = sd / sqrt(n)) |> 
+
+  ggplot(aes(
+    x = ano,
+    y = taxa_enc_media,
+    # group = taxon_validado,
+    # col = taxon_validado
+  )) +
+  geom_line(colour = "cyan4") +
+  geom_point(color = "cyan4", size = 3) +
+  geom_errorbar(
+    aes(ymin = taxa_enc_media - ep, ymax = taxa_enc_media + ep),
+    size = 0.8,
+    width = 0.1,
+    colour = "darkgreen"
+  ) +
+  #geom_text(aes(label = n), vjust = -3) +
+  #ylim(0, 1.0) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor.y = element_blank(),
+    #panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    #panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  ) +
+  scale_color_viridis(discrete = T) +
+  labs(title = "Taxa de encontro média de Pauxi tuberosa - todas as UC",
+       x = "Ano",
+       y = "Registros/10 km",
+       col = "Espécie")
+
+G_especie_ameacada_ucs_media
+
+
+```
+
+
+```{r gráfico espécie ameaçada - UC por ano - médias e erros}
+
+G_especie_ameacada_uc_ano_media <- taxa_encontro_spp_ameacadas |>
+  filter(uc == "Resex do Cazumbá-Iracema" & taxon_validado == "Penelope jacquacu") |>
+  group_by(uc, ano) |> 
+  summarise(n = n(),
+            taxa_enc_media = mean(taxa_encontro),
+            sd = sd(taxa_encontro),
+            ep = sd / sqrt(n)) |> 
+
+  ggplot(aes(
+    x = ano,
+    y = taxa_enc_media,
+    # group = taxon_validado,
+    # col = taxon_validado
+  )) +
+  geom_line(colour = "cyan4") +
+  geom_point(color = "cyan4", size = 3) +
+  geom_errorbar(
+    aes(ymin = taxa_enc_media - ep, ymax = taxa_enc_media + ep),
+    size = 0.8,
+    width = 0.1,
+    colour = "darkgreen"
+  ) +
+  #geom_text(aes(label = n), vjust = -3) +
+  #ylim(0, 1.0) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor.y = element_blank(),
+    #panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    #panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  ) +
+  scale_color_viridis(discrete = T) +
+  labs(title = "Taxa de encontro de Penelope jacquacu na Resex do Cazumbá-Iracema",
+       x = "Ano",
+       y = "Registros/10 km",
+       col = "Espécie")
+
+G_especie_ameacada_uc_ano_media
+
+
+```
+
+
+```{r grafico taxa de encontro especie ameaçada por ano }
+
+taxa_encontro_spp_ameacadas_ano <- taxa_encontro_spp_ameacadas |>
+  group_by(uc, ano, taxon_validado) |> 
+  count()
+
+View(taxa_encontro_spp_ameacadas_ano)
+
+```
+
+
+
+
+# Testes
+
+```{r dados teste, include = FALSE}
+
+library(dados)
+
+# dados_gapminder
+#
+View(dados_gapminder)
+#
+# unique(dados_gapminder$pais)
+# unique(dados_gapminder$continente)
+# unique(dados_gapminder$ano)
+#
+# names(dados_gapminder)
+
+#### Expectativa de vida média por continente
+
+expectativa_vida_continente <- dados_gapminder |>
+  group_by(continente) |>
+  summarise(
+    n = n(),
+    media_exp_vida = mean(expectativa_de_vida),
+    sd = sd(expectativa_de_vida),
+    ep = sd / (sqrt(n))
+  )
+
+
+#View(expectativa_vida_continente)
+
+### Gráfico A
+
+G_expectativa_vida_continente <- expectativa_vida_continente |>
+  
+  ggplot(aes(x = continente, y = media_exp_vida)) +
+  # geom_line(aes(color = continente)) +
+  geom_point(aes(color = continente, size = 3)) +
+  geom_errorbar(
+    aes(ymin = media_exp_vida - sd, ymax = media_exp_vida + sd),
+    size = 0.8,
+    width = 0.1
+  ) +
+  
+  #geom_text(aes(label = n), vjust = -3) +
+  ylim(0, 80) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor.y = element_blank(),
+    #panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    #panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  ) +
+  #scale_color_viridis(discrete = T) +
+  labs(title = "Expectativa de vida por continente",
+       x = "Continente",
+       y = "Expectativa de vida",
+       col = "Continente")
+
+G_expectativa_vida_continente
+
+
+```
+
+```{r grafico B, include = FALSE}
+
+#### Expectativa de vida média por continente por ano
+
+expectativa_vida_continente_ano <- dados_gapminder |>
+  group_by(continente, ano) |>
+  summarise(
+    n = n(),
+    media_exp_vida = mean(expectativa_de_vida),
+    sd = sd(expectativa_de_vida),
+    ep = sd / (sqrt(n))
+  )
+
+
+#View(expectativa_vida_continente_ano)
+
+
+### Gráfico B
+
+G_expectativa_vida_continente_ano <-
+  expectativa_vida_continente_ano |>
+  
+  ggplot(aes(x = ano, y = media_exp_vida)) +
+  geom_line(aes(color = continente)) +
+  geom_point(aes(color = continente)) +
+  geom_errorbar(
+    aes(ymin = media_exp_vida - ep, ymax = media_exp_vida + ep),
+    size = 0.8,
+    width = 0.1
+  ) +
+  
+  #geom_text(aes(label = n), vjust = -3) +
+  ylim(0, 80) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        #panel.grid.major.y = element_blank(),
+        panel.grid.minor.x = element_blank()) +
+        #panel.grid.major.x = element_blank(),
+        #legend.position = "none") +
+        #scale_color_viridis(discrete = T)) +
+          labs(title = "Expectativa de vida por continente por ano",
+               x = "Ano",
+               y = "Expectativa de vida",
+               col = "Continente")
+        
+G_expectativa_vida_continente_ano
+        
+
+```
+
+```{r grafico C, include = FALSE}
+
+#### Expectativa de vida média por país África
+
+expectativa_vida_paises_africa <- dados_gapminder |>
+  group_by(continente, pais) |>
+  filter(continente == "África") |>
+  summarise(
+    n = n(),
+    media_exp_vida = mean(expectativa_de_vida),
+    sd = sd(expectativa_de_vida),
+    ep = sd / (sqrt(n))
+  ) |>
+  filter(media_exp_vida > 58)
+
+View(expectativa_vida_paises_africa)
+
+
+### Gráfico C
+
+G_expectativa_vida_paises_africa <-
+  expectativa_vida_paises_africa |>
+  
+  ggplot(aes(x = pais, y = media_exp_vida)) +
+  #geom_line(aes(color = pais)) +
+  geom_point(aes(color = pais), size = 3) +
+  geom_errorbar(
+    aes(ymin = media_exp_vida - sd, ymax = media_exp_vida + sd),
+    size = 0.8,
+    width = 0.1
+  ) +
+  
+  #geom_text(aes(label = n), vjust = -3) +
+  ylim(0, 80) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor.y = element_blank(),
+    #panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    #panel.grid.major.x = element_blank(),
+    legend.position = "none"
+  ) +
+  #scale_color_viridis(discrete = T) +
+  labs(title = "Expectativa de vida por país na África",
+       x = "País",
+       y = "Expectativa de vida",
+       col = "País")
+
+G_expectativa_vida_paises_africa
+
+
+
+```
+
+```{r grafico D, include = FALSE}
+
+#### PIB per capta em países das Américas
+
+pib_per_capita_americas <- dados_gapminder |>
+  group_by(continente, pais) |>
+  summarise(
+    n = n(),
+    media_pib = mean(pib_per_capita),
+    sd = sd(pib_per_capita),
+    ep = sd / (sqrt(n))
+  ) |>
+  filter(continente == "Américas")
+
+
+View(pib_per_capita_americas)
+
+
+### Gráfico D
+
+G_pib_per_capita_americas <- pib_per_capita_americas |>
+  
+  ggplot(aes(x = fct_reorder(pais, media_pib, .desc = F), y = media_pib)) +
+  geom_col(fill = "#008B8B") +
+  coord_flip() +
+  scale_x_discrete(name = " ") +
+  scale_y_continuous(name = "PIB per capita") +
+  
+  # ggplot(aes(x = uc, y = taxa_enc_media)) +
+  theme_minimal() +
+  theme(panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_blank(),) +
+  labs(title = "PIB per capita Américas")
+
+G_pib_per_capita_americas
+
+```
+
